@@ -4,6 +4,23 @@ public class Calculadora {
 
     public static void main (String [] args){
       int ing;
+      //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA SUMA
+      double sum1=0, sum2=0, suma=0, op=0;
+      //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA RESTA
+      double res1=0, res2=0, resta=0;
+      //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA MULTIPLICACION
+      double mul1=0, mul2=0, multi=0;
+      //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA DIVISON
+      double div1=0, div2=0, divi=0;
+      //DECLARACION DE LOS ARRAYS QUE SE USARAN PARA LA BITACORA
+      double[] sumas = new double[20];
+      double[] restas = new double[20];
+      double[] ml = new double[20];
+      double[] dv = new double[20];
+      //ESTE SCANNER SERVIRA PARA LEER LA OPCION QUE SE INGRESARA
+      Scanner in = new Scanner(System.in);
+      /*EN ESTA PARTE SE USA UN CICLO DO WHILE PARA PODER REPETIR EL FLUJO DEL
+      PROGRAMA CUANTAS VECES QUERAMOS*/
       Scanner in = new Scanner(System.in);
       System.out.println("MENU");
       System.out.println("1. Suma de dos numeros");
@@ -18,7 +35,7 @@ public class Calculadora {
         switch (ing) {
           case 1:
           System.out.println("Selecciono la opcion \"1. Suma de dos numeros\"");
-          double sum1=0, sum2=0, suma=0, op=0;
+          
           Scanner n1 = new Scanner(System.in);
           Scanner n2 = new Scanner(System.in);
           System.out.println("Ingrese primer numero: ");
@@ -37,7 +54,7 @@ public class Calculadora {
           break;
           case 2:
             System.out.println("Selecciono la opcion \"2. Resta de dos numeros\"");
-            double res1=0, res2=0, resta=0;
+            
             Scanner r1 = new Scanner(System.in);
             Scanner r2 = new Scanner(System.in);
             System.out.println("Ingrese primer numero: ");
@@ -56,7 +73,7 @@ public class Calculadora {
             break;
               case 3:
               System.out.println("Selecciono la opcion \"3. Multiplicacion de dos numeros\"");
-              double mul1=0, mul2=0, multi=0;
+              
               Scanner m1 = new Scanner(System.in);
               Scanner m2 = new Scanner(System.in);
               System.out.println("Ingrese primer numero: ");
@@ -75,7 +92,7 @@ public class Calculadora {
               break;
                 case 4:
                 System.out.println("Selecciono la opcion \"4. Division de dos numeros\"");
-                double div1=0, div2=0, divi=0;
+                
                 Scanner d1 = new Scanner(System.in);
                 Scanner d2 = new Scanner(System.in);
                 System.out.println("Ingrese numero dividendo: ");
