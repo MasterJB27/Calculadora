@@ -21,7 +21,8 @@ public class Calculadora {
       Scanner in = new Scanner(System.in);
       /*EN ESTA PARTE SE USA UN CICLO DO WHILE PARA PODER REPETIR EL FLUJO DEL
       PROGRAMA CUANTAS VECES QUERAMOS*/
-      Scanner in = new Scanner(System.in);
+
+      do{
       System.out.println("MENU");
       System.out.println("1. Suma de dos numeros");
       System.out.println("2. Resta de dos numeros");
@@ -35,7 +36,7 @@ public class Calculadora {
         switch (ing) {
           case 1:
           System.out.println("Selecciono la opcion \"1. Suma de dos numeros\"");
-          
+
           Scanner n1 = new Scanner(System.in);
           Scanner n2 = new Scanner(System.in);
           System.out.println("Ingrese primer numero: ");
@@ -54,7 +55,7 @@ public class Calculadora {
           break;
           case 2:
             System.out.println("Selecciono la opcion \"2. Resta de dos numeros\"");
-            
+
             Scanner r1 = new Scanner(System.in);
             Scanner r2 = new Scanner(System.in);
             System.out.println("Ingrese primer numero: ");
@@ -73,7 +74,7 @@ public class Calculadora {
             break;
               case 3:
               System.out.println("Selecciono la opcion \"3. Multiplicacion de dos numeros\"");
-              
+
               Scanner m1 = new Scanner(System.in);
               Scanner m2 = new Scanner(System.in);
               System.out.println("Ingrese primer numero: ");
@@ -92,7 +93,7 @@ public class Calculadora {
               break;
                 case 4:
                 System.out.println("Selecciono la opcion \"4. Division de dos numeros\"");
-                
+
                 Scanner d1 = new Scanner(System.in);
                 Scanner d2 = new Scanner(System.in);
                 System.out.println("Ingrese numero dividendo: ");
@@ -114,6 +115,7 @@ public class Calculadora {
                 ingrese4 = ot4.nextLine();
                 System.out.println('\n');
                 break;
-        }
+              }
+            }while(ing!=7);
       }
     }
