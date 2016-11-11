@@ -1,3 +1,6 @@
+//VERSION FINAL DEL PROGRAMA
+
+//El import java.util.Scanner permite que se puedan ingresar datos a traves de la consola por el usuario
 import java.util.Scanner;
 
 public class Calculadora {
