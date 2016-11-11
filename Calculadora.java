@@ -110,6 +110,32 @@ public class Calculadora {
                 ingrese4 = ot4.nextLine();
                 System.out.println('\n');
                 break;
+                case 5:
+                System.out.println("Usted realizó las siguientes operaciones: ");
+                System.out.println("Las operaciones que usted realizo son: "+'\n');
+
+                  sumas[0]=sum1;
+                  sumas[1]=sum2;
+                  System.out.println(sumas[0] +" + " +sumas[1] +" = "+suma);
+
+                  restas[0]=res1;
+                  restas[1]=res2;
+                  System.out.println(restas[0] +" - " +restas[1] +" = "+resta);
+
+                  ml[0]=mul1;
+                  ml[1]=mul2;
+                  System.out.println(ml[0] +" * " +ml[1] +" = "+multi);
+
+                  dv[0]=div1;
+                  dv[1]=div2;
+                  System.out.println(dv[0] +" / " +dv[1] +" = "+divi);
+
+                System.out.println("Presione \"Enter\" para desplegar nuevamente el Menu Principal");
+                String ingrese5 = " ";
+                Scanner ot5 = new Scanner(System.in);
+                ingrese5 = ot5.nextLine();
+                System.out.println('\n');
+                break;
               }
             }while(ing!=7);
       }
