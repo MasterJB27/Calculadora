@@ -15,10 +15,10 @@ public class Calculadora {
       //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA DIVISON
       double div1=0, div2=0, divi=0;
       //DECLARACION DE LOS ARRAYS QUE SE USARAN PARA LA BITACORA
-      double[] sumas = new double[50];
-      double[] restas = new double[50];
-      double[] ml = new double[50];
-      double[] dv = new double[50];
+      String[] sumas = new String[50];
+      String[] restas = new String[50];
+      String[] ml = new String[50];
+      String[] dv = new String[50];
       //ESTE SCANNER SERVIRA PARA LEER LA OPCION QUE SE INGRESARA
       Scanner in = new Scanner(System.in);
       /*EN ESTA PARTE SE USA UN CICLO DO WHILE PARA PODER REPETIR EL FLUJO DEL
@@ -182,7 +182,7 @@ public class Calculadora {
 
                     }else{
                       System.out.println(sumas[cs]);
-//ESTA OPERACION LO QUE PERMITE ES QUE LA POSICION DEL INDICE VALLA INCREMENTANDO HASTA QUE NO SE ENCUENTR NINGUNA INFORMACION                      
+//ESTA OPERACION LO QUE PERMITE ES QUE LA POSICION DEL INDICE VALLA INCREMENTANDO HASTA QUE NO SE ENCUENTR NINGUNA INFORMACION
                       cs=cs+1;
                     }
 
