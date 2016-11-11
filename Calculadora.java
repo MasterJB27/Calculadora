@@ -42,7 +42,7 @@ public class Calculadora {
           case 1:
           //ESTA OPERACION INDICA EL INDICE DONDE SE GUARDARA LA OPERACION
           a1=a1+1;
-          System.out.println("Selecciono la opcion \"1. Suma de dos numeros\"");
+          System.out.println("Selecciono la opcion \"1. Suma de dos numeros\""+'\n');
           //EN ESTA PARTE ES DONDE EL USUARIO INGRESARA LOS NUMEROS A SUMAR
           Scanner n1 = new Scanner(System.in);
           Scanner n2 = new Scanner(System.in);
@@ -54,7 +54,7 @@ public class Calculadora {
 //CUANDO LA OPERACION SE HALLA REALIZADO, LA INFORMACION DE ESTA SE ALMACENARA EN LA LINEA 55, PARA LUEGO SER ENVIADA A LA BITACORA
           sumas[a1]=sum1+"+"+sum2+"="+""+suma;
 //ESTA PARTE DEL PROGRAMA PERMITE QUE EL FLUJO DEL PROGRAMA SE DETENGA HASTA QUE EL USUARIO PRESIONE LA TECLA "ENTER"
-          System.out.println('\n');
+          System.out.println();
           System.out.println("El resultado de la suma es: "+suma +'\n');
           System.out.println("Presione la tecla \"ENTER\" para desplegar nuevamente el Menu Principal");
           String ingrese1 = " ";
@@ -67,19 +67,19 @@ public class Calculadora {
           case 2:
 //ESTA OPERACION INDICA EL INDICE DONDE SE GUARDARA LA OPERACION
           a2=a2+1;
-            System.out.println("Selecciono la opcion \"2. Resta de dos numeros\"");
+            System.out.println("Selecciono la opcion \"2. Resta de dos numeros\""+'\n');
 //EN ESTA PARTE ES DONDE EL USUARIO INGRESARA LOS NUMEROS A RESTAR
             Scanner r1 = new Scanner(System.in);
             Scanner r2 = new Scanner(System.in);
             System.out.print("Ingrese primer numero: "); res1= r1.nextDouble();
-            System.out.println('\n');
+            System.out.println();
             System.out.print("Ingrese segundo numero: "); res2= r2.nextDouble();
             //AQUI SE REALIZA LA OPERACION CORRESPONDIENTE
             resta= res1-res2;
 //CUANDO LA OPERACION SE HALLA REALIZADO, LA INFORMACION DE ESTA SE ALMACENARA EN LA LINEA 80, PARA LUEGO SER ENVIADA A LA BITACORA
             restas[a2]=res1+"-"+res2+"="+""+resta;
 //ESTA PARTE DEL PROGRAMA PERMITE QUE EL FLUJO DEL PROGRAMA SE DETENGA HASTA QUE EL USUARIO PRESIONE LA TECLA "ENTER"
-            System.out.println('\n');
+            System.out.println();
             System.out.println("El resultado de la resta es: "+resta +'\n');
             System.out.println("Presione la tecla \"ENTER\" para desplegar nuevamente el Menu Principal");
             String ingrese2 = " ";
@@ -91,19 +91,19 @@ public class Calculadora {
               case 3:
 //ESTA OPERACION INDICA EL INDICE DONDE SE GUARDARA LA OPERACION
               a3=a3+1;
-              System.out.println("Selecciono la opcion \"3. Multiplicacion de dos numeros\"");
+              System.out.println("Selecciono la opcion \"3. Multiplicacion de dos numeros\""+'\n');
 //EN ESTA PARTE ES DONDE EL USUARIO INGRESARA LOS NUMEROS A MULTIPLICAR
               Scanner m1 = new Scanner(System.in);
               Scanner m2 = new Scanner(System.in);
               System.out.print("Ingrese primer numero: "); mul1= m1.nextDouble();
-              System.out.println('\n');
+              System.out.println();
               System.out.print("Ingrese segundo numero: "); mul2= m2.nextDouble();
 //AQUI SE REALIZA LA OPERACION CORRESPONDIENTE
               multi= mul1*mul2;
 //CUANDO LA OPERACION SE HALLA REALIZADO, LA INFORMACION DE ESTA SE ALMACENARA EN LA LINEA 104, PARA LUEGO SER ENVIADA A LA BITACORA
               ml[a3]=mul1+"*"+mul2+"="+""+multi;
 //ESTA PARTE DEL PROGRAMA PERMITE QUE EL FLUJO DEL PROGRAMA SE DETENGA HASTA QUE EL USUARIO PRESIONE LA TECLA "ENTER"
-              System.out.println('\n');
+              System.out.println();
               System.out.println("El resultado de la resta es: "+multi +'\n');
               System.out.println("Presione la tecla \"ENTER\" para desplegar nuevamente el Menu Principal");
               String ingrese3 = " ";
@@ -115,14 +115,14 @@ public class Calculadora {
                 case 4:
 //ESTA OPERACION INDICA EL INDICE DONDE SE GUARDARA LA OPERACION
                 a4=a4+1;
-                System.out.println("Selecciono la opcion \"4. Division de dos numeros\"");
+                System.out.println("Selecciono la opcion \"4. Division de dos numeros\"" +'\n');
 //EN ESTA PARTE ES DONDE EL USUARIO INGRESARA LOS NUMEROS A DIVIDIR
                 Scanner d1 = new Scanner(System.in);
                 Scanner d2 = new Scanner(System.in);
                 System.out.print("Ingrese numero dividendo: "); div1= d1.nextDouble();
-                System.out.println('\n');
+                System.out.println();
                 System.out.print("Ingrese numero divisor: "); div2= d2.nextDouble();
-                System.out.println('\n');
+                System.out.println();
 //EN ESTA PARTE EL PROGRAMA EVALUARA SI EL NUMERO DIVISOR ES DIFERENTE DE "0"
                 if (div2!=0){
 //SI EL NUMERO DIVISOR ES DIFERENTE DE "0", ENTONCES EL PROGRAMA REALIZARA LA OPERACION DE FORMA CORRECTA
