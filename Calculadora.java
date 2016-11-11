@@ -87,7 +87,7 @@ public class Calculadora {
             ingrese2 = ot2.nextLine();
             System.out.println('\n');
             break;
-
+//ESTE CASE SE ENCARGARA DE LAS MULTIPLICACIONES
               case 3:
 //ESTA OPERACION INDICA EL INDICE DONDE SE GUARDARA LA OPERACION
               a3=a3+1;
@@ -111,7 +111,7 @@ public class Calculadora {
               ingrese3 = ot3.nextLine();
               System.out.println('\n');
               break;
-
+//ESTE CASE SE ENCARGARA DE LAS DIVISIONES
                 case 4:
 //ESTA OPERACION INDICA EL INDICE DONDE SE GUARDARA LA OPERACION
                 a4=a4+1;
@@ -144,32 +144,52 @@ public class Calculadora {
                 System.out.println('\n');
                 break;
 
+//ESTE CASE SE UTILIZARA PARA PODER MOSTRAR LA BITACORA O HISTORIAL DE LAS OPERACIONES QUE SE VALLAN REALIZANDO
                 case 5:
-                System.out.println("Usted realizó las siguientes operaciones: ");
-                System.out.println("Las operaciones que usted realizo son: "+'\n');
+                System.out.println("Usted realizo las siguientes operaciones: " +'\n');
+//ESTAS VARIABLES SON LAS QUE INDICAN EL PUNTO DE INCIO DE CADA UNO DE LOS INDICES
+                int cs=0, cr=0, cm=0, cd=0;
+//EN ESTA PARTE EL PROGRAMA EVALUARA SI LA CONDICION SE CUMPLE Y DE SER ASI, SE EJECUTARA UN CICLO WHILE
+                  while(cs<50){
+//SE UTILIZO UNA SERIE DE IF EN LOS CUALES SE EVALUARA EL MOMENTO EN EL CUAL LOS INDICES YA NO CONTENGAN NINGUNA OPERACIONE
+//PARA ASI PODER OMITIR ESOS INDICES
+                    if(sumas[cs]==null){
+                      if(restas[cr]==null){
+                        if(ml[cm]==null){
+                          if(dv[cd]==null){
+//EN EL MOMENTO EN QUE LOS INDICES SIN UTILIZAR SEAN DESCARTADOS, EL PROGRAMA EJECUTARA LA PARTE DEL PROGRAMA QUE LO DETENDRA HASTA QUE EL USUARIO PRESIONE "ENTER"
+                          System.out.println("Presione \"Enter\" para desplegar nuevamente el Menu Principal");
+                            String ingrese5 = " ";
+                            Scanner ot5 = new Scanner(System.in);
+                            ingrese5 = ot5.nextLine();
+                            System.out.println('\n');
+                            break;
+//DE LO CONTRARIO, SI LOS INDICE SI CONTIENEN INFORMACION GUARDADA, SE PROCEDERA A IMPRIMIR CADA UNO DE ESOS INDICES EN ESTA PARTE DONDE SE DECLARARON LOS ELESE
+                          }else{
+                            System.out.println(dv[cd]);
+//ESTA OPERACION LO QUE PERMITE ES QUE LA POSICION DEL INDICE VALLA INCREMENTANDO HASTA QUE NO SE ENCUENTR NINGUNA INFORMACION
+                          cd=cd+1;}
+                        }else{
+                          System.out.println(ml[cm]);
+//ESTA OPERACION LO QUE PERMITE ES QUE LA POSICION DEL INDICE VALLA INCREMENTANDO HASTA QUE NO SE ENCUENTR NINGUNA INFORMACION
+                          cm=cm+1;
+                        }
+                      }else{
+                        System.out.println(restas[cr]);
+//ESTA OPERACION LO QUE PERMITE ES QUE LA POSICION DEL INDICE VALLA INCREMENTANDO HASTA QUE NO SE ENCUENTR NINGUNA INFORMACION
+                        cr=cr+1;
+                      }
 
-                  sumas[0]=sum1;
-                  sumas[1]=sum2;
-                  System.out.println(sumas[0] +" + " +sumas[1] +" = "+suma);
+                    }else{
+                      System.out.println(sumas[cs]);
+//ESTA OPERACION LO QUE PERMITE ES QUE LA POSICION DEL INDICE VALLA INCREMENTANDO HASTA QUE NO SE ENCUENTR NINGUNA INFORMACION                      
+                      cs=cs+1;
+                    }
 
-                  restas[0]=res1;
-                  restas[1]=res2;
-                  System.out.println(restas[0] +" - " +restas[1] +" = "+resta);
+          }
 
-                  ml[0]=mul1;
-                  ml[1]=mul2;
-                  System.out.println(ml[0] +" * " +ml[1] +" = "+multi);
 
-                  dv[0]=div1;
-                  dv[1]=div2;
-                  System.out.println(dv[0] +" / " +dv[1] +" = "+divi);
-
-                System.out.println("Presione \"Enter\" para desplegar nuevamente el Menu Principal");
-                String ingrese5 = " ";
-                Scanner ot5 = new Scanner(System.in);
-                ingrese5 = ot5.nextLine();
-                System.out.println('\n');
-                break;
+break;
               }
             }while(ing!=7);
       }
