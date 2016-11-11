@@ -5,7 +5,7 @@ public class Calculadora {
     public static void main (String [] args){
       int ing;
       //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA SUMA
-      double sum1=0, sum2=0, suma=0, op=0;
+      double sum1=0, sum2=0, suma=0;
       //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA RESTA
       double res1=0, res2=0, resta=0;
       //DECLARACION DE LAS VARIABLES QUE SE USARAN PARA LA MULTIPLICACION
@@ -23,6 +23,8 @@ public class Calculadora {
       PROGRAMA CUANTAS VECES QUERAMOS*/
 
       do{
+      /*EN LOS SIGUIENTES TEXTOS SE REPRESENTA EL MENU EN DONDE SE ENCUENTRAN
+      LAS OPCIONES QUE EL USUARIO PODRA ELEGIR*/
       System.out.println("MENU");
       System.out.println("1. Suma de dos numeros");
       System.out.println("2. Resta de dos numeros");
@@ -39,11 +41,9 @@ public class Calculadora {
 
           Scanner n1 = new Scanner(System.in);
           Scanner n2 = new Scanner(System.in);
-          System.out.println("Ingrese primer numero: ");
-          sum1= n1.nextInt();
-          System.out.println('\n');
-          System.out.println("Ingrese segundo numero: ");
-          sum2= n2.nextInt();
+          System.out.print("Ingrese primer numero: "); sum1= n1.nextDouble();
+          System.out.print('\n');
+          System.out.print("Ingrese segundo numero: "); sum2= n2.nextDouble();
           suma= sum1+sum2;
           System.out.println('\n');
           System.out.println("El resultado de la suma es: "+suma +'\n');
@@ -58,11 +58,9 @@ public class Calculadora {
 
             Scanner r1 = new Scanner(System.in);
             Scanner r2 = new Scanner(System.in);
-            System.out.println("Ingrese primer numero: ");
-            res1= r1.nextInt();
+            System.out.print("Ingrese primer numero: "); res1= r1.nextDouble();
             System.out.println('\n');
-            System.out.println("Ingrese segundo numero: ");
-            res2= r2.nextInt();
+            System.out.print("Ingrese segundo numero: "); res2= r2.nextDouble();
             resta= res1-res2;
             System.out.println('\n');
             System.out.println("El resultado de la resta es: "+resta +'\n');
@@ -72,16 +70,15 @@ public class Calculadora {
             ingrese2 = ot2.nextLine();
             System.out.println('\n');
             break;
+
               case 3:
               System.out.println("Selecciono la opcion \"3. Multiplicacion de dos numeros\"");
 
               Scanner m1 = new Scanner(System.in);
               Scanner m2 = new Scanner(System.in);
-              System.out.println("Ingrese primer numero: ");
-              mul1= m1.nextInt();
+              System.out.print("Ingrese primer numero: "); mul1= m1.nextDouble();
               System.out.println('\n');
-              System.out.println("Ingrese segundo numero: ");
-              mul2= m2.nextInt();
+              System.out.print("Ingrese segundo numero: "); mul2= m2.nextDouble();
               multi= mul1*mul2;
               System.out.println('\n');
               System.out.println("El resultado de la resta es: "+multi +'\n');
@@ -96,11 +93,9 @@ public class Calculadora {
 
                 Scanner d1 = new Scanner(System.in);
                 Scanner d2 = new Scanner(System.in);
-                System.out.println("Ingrese numero dividendo: ");
-                div1= d1.nextInt();
+                System.out.print("Ingrese numero dividendo: "); div1= d1.nextDouble();
                 System.out.println('\n');
-                System.out.println("Ingrese numero divisor: ");
-                div2= d2.nextInt();
+                System.out.print("Ingrese numero divisor: "); div2= d2.nextDouble();
                 System.out.println('\n');
                 if (div2!=0){
                   divi= div1/div2;
