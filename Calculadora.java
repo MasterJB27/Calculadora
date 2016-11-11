@@ -155,10 +155,10 @@ public class Calculadora {
                   while(cs<50){
 //SE UTILIZO UNA SERIE DE IF EN LOS CUALES SE EVALUARA EL MOMENTO EN EL CUAL LOS INDICES YA NO CONTENGAN NINGUNA OPERACIONE
 //PARA ASI PODER OMITIR ESOS INDICES
-                    if(sumas[cs]==null){
-                      if(restas[cr]==null){
-                        if(ml[cm]==null){
-                          if(dv[cd]==null){
+                      if(sumas[cs]==null || sumas[cs]==""){
+                          if(restas[cr]==null || restas[cr]==""){
+                              if(ml[cm]==null || ml[cm]==""){
+                                  if(dv[cd]==null || dv[cd]==""){
 //EN EL MOMENTO EN QUE LOS INDICES SIN UTILIZAR SEAN DESCARTADOS, EL PROGRAMA EJECUTARA LA PARTE DEL PROGRAMA QUE LO DETENDRA HASTA QUE EL USUARIO PRESIONE "ENTER"
                           System.out.println("Presione \"Enter\" para desplegar nuevamente el Menu Principal");
                             String ingrese5 = " ";
@@ -189,10 +189,62 @@ public class Calculadora {
                     }
 
           }
+break;
 
+//ESTE CASE LO QUE PERMITIRA ES BORRAR LA INFORMACION DE LA BITACORA
+                  case 6:
+                  double bor, b=0;
+//EN CASO DE QUE EL USUARIO PRESIONE POR ERROR LA OPCION DE BORRAR DAROS, SE PRESENTARA UN MENSAJE EN EL CUAL LE PIDE CONFIRMAR QUE LA DESEA BORRAR
+                  System.out.println("¿Desea Borrar la Informacion?"  +'\n'+"1. Si" +'\n' +"2. No");
+                  Scanner ifc = new Scanner(System.in);
+                  bor = ifc.nextInt();
+//EN ESTA PARTE EL PROGRAMA EVALUARA SI EL USUARIO CONFIRMA QUE QUIERE BORRAR LA INFORMACION DE LA BITACORA
+                  if(bor==1){
+/*LUEGO DE SER CONFIRMADO QUE SE QUIERE BORRAR LA BITACORA, SE EJECUTARA UN CICLO FOR, EL CUAL ELIMINARA EL CONTENIDO DE TODOS LOS ARRAYS QUE SE
+UTILIZARON EN LA BITACORA */
+                  for(int a=0; a<50; a++){
+                    sumas[a]="";
+                    restas[a]="";
+                    ml[a]="";
+                    dv[a]="";
+                  }
+//ASI MISMO TODAS LAS VARIBALES UTILIZADAS PARA LA BITACORA SE DEVOLVERAN A SU VALOR INCIAL PARA QUE LA INFORMACION QUE CONTENIAN SEA BORRADA
+                  cs=0;
+                  cr=0;
+                  cm=0;
+                  cd=0;
+                  a1=-1;
+                  a2=-1;
+                  a3=-1;
+                  a4=-1;
+//LUEGO DE QUE ESTA CONDICION SE HALLA CUMPLIDO EXITOSAMENTE SE MOSTRARA UN MENSAJE CONFIRMANDOLO
+                  System.out.println("\"LA INFORMACION SE HA BORRADO EXITOSAMENTE\"" +'\n');
+                  }
+//POR EL CONTRARIO SI EL USUARIO NO DESEA BORRAR LA BITACORA, EL FLUJO DEL PROGRAMA SE EJECUTARA NORMALMENTE
+                  System.out.println("Presione \"Enter\" para desplegar nuevamente el Menu Principal");
+                  String ingrese6 = " ";
+                  Scanner ot6 = new Scanner(System.in);
+                  ingrese6 = ot6.nextLine();
+                  System.out.println('\n');
+                  break;
+//ESTE CASE ES EL QUE PERMITE TERMINAR EL FLUJO DEL PROGRAMA CUANDO SEA ELEGIDO
+case 7:
+break;
 
+/*LA OPCION DEFAULT PROVOCARA QUE, SI NO SE ESCOGE UNA OPCION DE LAS QUE ESTAN ESTABLECIDAS EN EL MENU, MOSTRARA UN MENSAJE
+DONDE LE INFORMARA AL USUARIO QUE LA OPCION NO ES VALIDA*/
+default:
+System.out.println("Opcion No Valida, Por Favor Regrese al Menu y Elija una Opcion Valida" +'\n');
+
+System.out.println("Presione \"Enter\" para desplegar nuevamente el Menu Principal");
+String ingrese8 = " ";
+Scanner ot8 = new Scanner(System.in);
+ingrese8 = ot8.nextLine();
+System.out.println('\n');
 break;
               }
+/*EN EL FINAL DEL "DO" SE ENCUENTRA EL "WHILE" QUE COMPLETARA EL CICLO DO WHILE, EN EL CUAL SE EVALUARA LA CONDICION DE QUE
+EL PROGRAMA SE REPETIRA MIENTRAS LA CONDICION SE CUMPLA */
             }while(ing!=7);
       }
     }
