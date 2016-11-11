@@ -135,6 +135,8 @@ public class Calculadora {
 //DE LO CONTARIO SI EL NUMERO DIVISOR ES IGUAL A "0" ENTONCES SE IMPRIMIRA UN ERROR
                 else{
                   System.out.println("ERROR: La division entre 0 no es permitida");
+//EN ESTE PUNTO SI EL USUARIO INGRESO UNA DIVISION ENTRE "0" EL INDICE ALAMACENARA UN ERROR QUE PODRA SER VISRO EN LA BITACORA
+                  dv[a4]=div1+"/"+div2+"="+""+"ERROR";
                 }
 //ESTA PARTE DEL PROGRAMA PERMITE QUE EL FLUJO DEL PROGRAMA SE DETENGA HASTA QUE EL USUARIO PRESIONE LA TECLA "ENTER"
                 System.out.println("Presione una tecla para desplegar nuevamente el Menu Principal");
